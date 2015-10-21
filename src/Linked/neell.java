@@ -18,7 +18,7 @@ public class neell
                int  n;
                for(;true;)
                {
-                    n = rand.nextInt(50) + 1;
+                    n = rand.nextInt(40) + 1;
                     if(u[n]=='a')
                          break;
                }
@@ -67,7 +67,7 @@ public class neell
           }
           for(;no.k[p].a!=-1&&no.k[no.k[p].a].x!=x;)
                p=no.k[p].a;
-          if(no.k[no.k[p].a].x==x)
+          if(no.k[p].a!=-1&&no.k[no.k[p].a].x==x)
           {
                int t=no.k[p].a;
                no.k[p].a=no.k[no.k[p].a].a;

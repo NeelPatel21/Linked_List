@@ -1,49 +1,37 @@
 package linked_list;
 import Linked.*;
-import javax.swing.*;
+import java.awt.Color;
 import java.awt.event.*;
+import javax.swing.*;
 public class Linked_List extends JFrame
 {
      int l;
      neell z=new neell();
-     JTextArea t[],teg[],v[],f,f1;
+     JTextArea f;
+     JLabel f1;
+     npanal t[]=new npanal[41];;
      JButton insertb,delb;
      Linked_List()
      {
-          t=new JTextArea[41];
-          v=new JTextArea[41];
-          teg=new JTextArea[41];
           {
                int ji=300;
                f=new JTextArea("",1,1);
                f.setBounds(ji+50,450,50,20);
-               f.setEnabled(false);
+               f.setEditable(false);
+               f.setBackground(Color.YELLOW);
+               f.setForeground(Color.BLACK);
                add(f);
-               f1=new JTextArea("First",1,1);
+               f1=new JLabel("First");
                f1.setBounds(ji,450,50,20);
-               f1.setEnabled(false);
+               f1.setForeground(Color.BLACK);
                add(f1);
           }
           for(int i=1;i<t.length;i++)
           {
-               t[i]=new JTextArea("",1,1);
-               t[i].setRows(1);
-               t[i].setColumns(1);
-               t[i].setBounds(((i-1)%8)*100+70,((i-1)/8)*50+20,25,20);
-               t[i].setEnabled(false);
+               t[i]=new npanal(i);
+               //t[i].setBound(((i-1)%8)*100+20,((i-1)/8)*60+20,100,50);
+               t[i].setLocation(((i-1)%8)*110+20,((i-1)/8)*60+20);
                add(t[i]);
-               v[i]=new JTextArea("",1,1);
-               v[i].setRows(1);
-               v[i].setColumns(1);
-               v[i].setBounds(((i-1)%8)*100+95,((i-1)/8)*50+20,25,20);
-               v[i].setEnabled(false);
-               add(v[i]);
-               teg[i]=new JTextArea(Integer.toString(i),1,1);
-               teg[i].setRows(1);
-               teg[i].setColumns(1);
-               teg[i].setBounds(((i-1)%8)*100+70,((i-1)/8)*50+40,50,20);
-               teg[i].setEnabled(false);
-               add(teg[i]);
           }
           insertb=new JButton("insert");
           insertb.setBounds(50,450,100,20);
@@ -58,6 +46,8 @@ public class Linked_List extends JFrame
           delb.addActionListener(evd);
           add(delb);
           setSize(900,600);
+          setTitle("Linked List");
+          setBackground(Color.DARK_GRAY);
           setLayout(null);
           setVisible(true);
           setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -73,18 +63,24 @@ public class Linked_List extends JFrame
                f.setText(Integer.toString(z.f));
           for(int i=1;i<=40;i++)
           {
-               t[i].setText("");
-               v[i].setText("");
+               t[i].a.setText("");
+               t[i].v.setText("");
+               t[i].v.setBackground(Color.DARK_GRAY);
+               t[i].a.setBackground(Color.DARK_GRAY);
+               t[i].setBackground(Color.DARK_GRAY);
           }
           for(int i=0;i<=40;i++)
           {
                if(z.used(i))
                {
-                    t[i].setText(Integer.toString(z.gv(i)));
+                    t[i].v.setText(Integer.toString(z.gv(i)));
                     String s=Integer.toString(z.ga(i));
                     if("0".equals(s))
                          s="";
-                    v[i].setText(s);
+                    t[i].a.setText(s);
+                    t[i].v.setBackground(Color.BLACK);
+                    t[i].a.setBackground(Color.BLACK);
+                    t[i].setBackground(Color.BLACK);
                }
           }
      }

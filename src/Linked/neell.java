@@ -27,7 +27,6 @@ public class neell
           }
      void freeold(int p)
      {
-          //no.k[p].x='\0';
           no.k[p].a=-1;
           u[p]='a';
      }
@@ -90,13 +89,11 @@ public class neell
      public int ga(int p)
      {
           if(no.k[p].a!=-1)
-          return no.k[p].a;
+               return no.k[p].a;
           return 0;
      }
      public boolean used(int v)
      {
-          if(u[v]=='#')
-               return true;
-          return false;
+          return u[v]=='#';
      }
 }

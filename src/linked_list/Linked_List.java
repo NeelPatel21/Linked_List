@@ -18,10 +18,10 @@ public class Linked_List extends JFrame
                f=new JTextArea("",1,1);
                f.setBounds(ji+50,450,50,20);
                f.setEditable(false);
-               f.setBackground(Color.YELLOW);
-               f.setForeground(Color.BLACK);
+               f.setBackground(new Color(0,50,120));
+               f.setForeground(new Color(255,255,0));
                add(f);
-               f1=new JLabel("First");
+               f1=new JLabel("First = ");
                f1.setBounds(ji,450,50,20);
                f1.setForeground(Color.BLACK);
                add(f1);
@@ -29,7 +29,6 @@ public class Linked_List extends JFrame
           for(int i=1;i<t.length;i++)
           {
                t[i]=new npanal(i);
-               //t[i].setBound(((i-1)%8)*100+20,((i-1)/8)*60+20,100,50);
                t[i].setLocation(((i-1)%8)*110+20,((i-1)/8)*60+20);
                add(t[i]);
           }
@@ -65,9 +64,9 @@ public class Linked_List extends JFrame
           {
                t[i].a.setText("");
                t[i].v.setText("");
-               t[i].v.setBackground(Color.DARK_GRAY);
-               t[i].a.setBackground(Color.DARK_GRAY);
-               t[i].setBackground(Color.DARK_GRAY);
+               t[i].v.setBackground(new Color(60,60,60));
+               t[i].a.setBackground(new Color(60,60,60));
+               t[i].setBackground(new Color(60,60,60));
           }
           for(int i=0;i<=40;i++)
           {

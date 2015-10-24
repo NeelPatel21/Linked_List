@@ -12,21 +12,21 @@ public class npanal extends javax.swing.JPanel {
           v=new JTextArea("",1,1);
           v.setBounds(0,0,50,20);
           v.setEditable(false);
-          v.setForeground(Color.getHSBColor((float) 1.623,1000,1000));
-          v.setBackground(Color.DARK_GRAY);        
+          v.setForeground(new Color(0,255,0));
+          v.setBackground(new Color(60,60,60));        
           add(v);
           a.setBounds(50,0,50,20);
-          a.setForeground(Color.ORANGE);
-          a.setBackground(Color.DARK_GRAY);
+          a.setForeground(new Color(0,255,255));
+          a.setBackground(new Color(60,60,60));
           a.setEditable(false);
           add(a);
           l.setBounds(0,30,100,20);
-          l.setForeground(Color.red);
+          l.setForeground(new Color(255,0,0));
           l.setHorizontalAlignment(0);
           add(l);
           setSize(100,50);
           setLayout(null);
-          setBackground(Color.DARK_GRAY);
+          setBackground(new Color(60,60,60));
           setVisible(true);
      }
      // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
